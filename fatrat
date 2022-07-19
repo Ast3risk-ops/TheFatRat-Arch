@@ -1222,7 +1222,7 @@ function chknet(){
 
 cont(){
 # Check Apache if Exists
-which apache2 > /dev/null 2>&1
+which httpd > /dev/null 2>&1
 	if [ "$?" -eq "0" ]; then
 	   echo -e $okegreen [✔]::[Apache2 Server $distro ]: Installation found!;
 	else
@@ -1512,11 +1512,11 @@ fi
 if [ "$distro" = "Kali" ]; then
 	/etc/init.d/postgresql start > /dev/null 2>&1
 	/etc/init.d/metasploit start > /dev/null 2>&1
-	/etc/init.d/apache2 start > /dev/null 2>&1
+	/etc/init.d/httpd start > /dev/null 2>&1
 else
 	/etc/init.d/postgresql start > /dev/null 2>&1
 	/etc/init.d/metasploit start > /dev/null 2>&1
-	/etc/init.d/apache2 start > /dev/null 2>&1
+	/etc/init.d/httpd start > /dev/null 2>&1
 fi
 	read -p "Press [Enter] key to Continue..."
 	clear
@@ -1603,10 +1603,10 @@ function Stop(){
 if [ "$distro" = "Kali" ]; then
   /etc/init.d/postgresql stop > /dev/null 2>&1
   /etc/init.d/metasploit stop > /dev/null 2>&1
-  /etc/init.d/apache2 stop > /dev/null 2>&1
+  /etc/init.d/httpd stop > /dev/null 2>&1
 else
   /etc/init.d/metasploit stop > /dev/null 2>&1
-  /etc/init.d/apache2 stop > /dev/null 2>&1
+  /etc/init.d/httpd stop > /dev/null 2>&1
   /etc/init.d/postgresql stop > /dev/null 2>&1
 fi
 
