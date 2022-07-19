@@ -522,16 +522,16 @@ fi
 fi
 sleep 1
 #check if apache2 exists
-which apache2 > /dev/null 2>&1
+which httpd > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
 echo -e "$green" "[ ✔ ] Apache2 ..........................[ found ]"
-which apache2 >> "$log" 2>&1
+which httpd >> "$log" 2>&1
 echo "Apache2 -> OK" >> "$inst"
 else
 echo -e "$red" "[ X ] Apache2 -> not found  "
 echo -e "$yellow" "[ ! ]    Installing apache2 "
 xterm -T "☣ INSTALL APACHE2 ☣" -geometry 100x30 -e "sudo apt-get install apache2 -y"
-which apache2 >> "$log" 2>&1
+which httpd >> "$log" 2>&1
 if [ "$?" -eq "0" ]; then
 echo -e "$green" "[ ✔ ] Apache2 -> OK"
 echo "Apache2 -> OK" >> "$inst"
