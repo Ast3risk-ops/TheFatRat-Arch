@@ -1,5 +1,6 @@
 
-# TheFatRat 
+# TheFatRat Arch Edition
+Just includes fixes for Arch-based distros
 
 [![Version](https://img.shields.io/badge/TheFatRat-1.9.8-brightgreen.svg?maxAge=259200)]()
 [![Version](https://img.shields.io/badge/Codename-Target-red.svg?maxAge=259200)]()
